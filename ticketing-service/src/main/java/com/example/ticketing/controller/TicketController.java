@@ -14,8 +14,8 @@ public class TicketController {
     private final TicketService ticketService;
 
     @PostMapping("/ticket")
-    public void createTicket(@RequestBody CreateTicketRequest request) {
-        ticketService.reserveTicket(request);
+    public Ticket createTicket(@RequestBody CreateTicketRequest request) {
+        return ticketService.reserveTicket(request);
     }
 
     @GetMapping("/ticket/{id}")

@@ -23,9 +23,10 @@ public class TicketService {
         return toTicket(entity);
     }
 
-    public void reserveTicket(CreateTicketRequest request) {
-        var ticket = save(createTicket(request));
-        paymentProducer.sendMessage(ticket.getId(), request.price());
+    public Ticket reserveTicket(CreateTicketRequest request) {
+        var entity = save(createTicket(request));
+        paymentProducer.sendMessage(entity.getId(), request.price());
+        return toTicket(entity);
     }
 
     public void finalizeTicketReservation(Payment outcome) {
