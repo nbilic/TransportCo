@@ -15,3 +15,8 @@ server:
   port: 0
 ticketing-properties:
   base-url: http://TICKETING-SERVICE
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0

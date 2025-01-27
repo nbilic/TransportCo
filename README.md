@@ -1,5 +1,16 @@
-Kafka used for ticketing -> payment communication
-Other services communicate via REST
+Service communication:
 
-Eureka used for service registry
-Spring cloud gateway used for routing calls to appropriate services
+    - Kafka ( ticketing <-> payment )
+    - REST 
+
+API Gateway
+    
+    - Spring Cloud Gateway
+
+Service Registry
+
+    - Eureka
+
+Distributed tracing
+
+    - Micrometer + Zipkin
