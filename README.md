@@ -7,7 +7,7 @@ API Gateway
     
     - Spring Cloud Gateway
 
-Service Registry
+Service Discovery
 
     - Eureka
 
