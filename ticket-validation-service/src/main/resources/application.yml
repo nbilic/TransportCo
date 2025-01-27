@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ticket-validation-service
+  cloud:
+    discovery:
+      enabled: true
+    loadbalancer:
+      retry:
+        enabled: true
+    eureka:
+      client:
+        service-url:
+          defaultZone: http://localhost:8761/eureka/  # Eureka server URL
+server:
+  port: 0
+ticketing-properties:
+  base-url: http://TICKETING-SERVICE
